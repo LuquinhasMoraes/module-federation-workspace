@@ -1,0 +1,4 @@
+DOCS:
+
+https://www.angulararchitects.io/en/blog/module-federation-with-angulars-standalone-components/
+https://www.angulararchitects.io/blog/the-microfrontend-revolution-part-2-module-federation-with-angular/
