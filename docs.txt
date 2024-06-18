@@ -1,4 +1,8 @@
-DOCS:
+CLI:
 
+ng add @angular-architects/module-federation --project shell --port 4200 --type host
+ng add @angular-architects/module-federation --project mfe1 --port 4201 --type remote
+
+DOCS:
 https://www.angulararchitects.io/en/blog/module-federation-with-angulars-standalone-components/
 https://www.angulararchitects.io/blog/the-microfrontend-revolution-part-2-module-federation-with-angular/
