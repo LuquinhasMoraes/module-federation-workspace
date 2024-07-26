@@ -33,19 +33,19 @@ module.exports = {
 
         // For hosts (please adjust)
         remotes: {
-          // 'mfe1': "mfe1@http://localhost:4201/remoteEntry.js"
+          'app2': "app2@http://localhost:4202/remoteEntry.js"
         },
 
         shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/core": { singleton: true, strictVersion: false, requiredVersion: '12.2.0 - 15.0.0' },
+          "@angular/common": { singleton: true, strictVersion: false, requiredVersion: '12.2.0 - 15.0.10' },
+          "@angular/common/http": { singleton: true, strictVersion: false, requiredVersion: '12.2.0 - 15.0.0' },
+          "@angular/router": { singleton: true, strictVersion: false, requiredVersion: '12.2.0 - 15.0.0' },
 
           ...sharedMappings.getDescriptors()
         })
 
     }),
-    sharedMappings.getPlugin()
+    sharedMappings.getPlugin(),
   ],
 };
