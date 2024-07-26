@@ -8,6 +8,7 @@ import { createCustomElement } from '@angular/elements';
 import { TesteAModule } from './teste-a/teste-a.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TesteBRoutingModule } from './teste-b/teste-b.routing';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

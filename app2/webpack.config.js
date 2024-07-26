@@ -31,7 +31,7 @@ module.exports = {
       filename: "remoteEntry.js",
 
       exposes: {
-        './web-components': './src/bootstrap.ts',
+        './app': './src/bootstrap.ts',
         './teste-b': './src/bootstrap-teste-b.ts',
         './teste-a': './src/bootstrap-teste-a.ts',
         './component': './src/app/app.component.ts',
