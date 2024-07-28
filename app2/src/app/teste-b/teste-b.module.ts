@@ -11,7 +11,6 @@ import { BrowserModule } from '@angular/platform-browser';
   declarations: [],
   imports: [
     CommonModule,
-    BrowserModule,
     TesteBRoutingModule
   ]
 })

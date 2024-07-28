@@ -41,6 +41,7 @@ module.exports = {
           "@angular/common": { singleton: true, strictVersion: false, requiredVersion: '12.2.0 - 15.0.10' },
           "@angular/common/http": { singleton: true, strictVersion: false, requiredVersion: '12.2.0 - 15.0.0' },
           "@angular/router": { singleton: true, strictVersion: false, requiredVersion: '12.2.0 - 15.0.0' },
+          // "@angular/platform-browser": {strictVersion: true, requiredVersion: 'auto' },
 
           ...sharedMappings.getDescriptors()
         })

@@ -4,7 +4,7 @@ import { TesteBComponent } from './teste-b.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'teste-b',
     component: TesteBComponent
   }
 ];

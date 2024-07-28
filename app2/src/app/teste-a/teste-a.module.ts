@@ -1,28 +1,35 @@
-import { DoBootstrap, Injector, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TesteARoutingModule } from './teste-a.routing';
 import { createCustomElement } from '@angular/elements';
 import { TesteAComponent } from './teste-a.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ComponentAComponent } from './component-a/component-a.component';
 import { ComponentBComponent } from './component-b/component-b.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppRoutingModule } from '../app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 
+const routes: Routes = [
 
+    {
+      path: 'teste-a/sub-a',
+      component: ComponentAComponent
+    },
+    {
+      path: 'teste-a/sub-b',
+      component: ComponentBComponent
+    }
+
+];
 
 @NgModule({
   declarations: [
     ComponentAComponent,
-    ComponentBComponent
+    ComponentBComponent,
+    TesteAComponent
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    AppRoutingModule,
-    TesteARoutingModule,
-    RouterModule.forRoot([])
+    RouterModule.forChild(routes),
   ]
 })
 export class TesteAModule implements DoBootstrap {

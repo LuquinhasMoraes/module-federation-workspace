@@ -9,17 +9,19 @@ import { TesteAModule } from './teste-a/teste-a.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TesteBRoutingModule } from './teste-b/teste-b.routing';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     RouterTestingModule,
     TesteAModule,
-    TesteBRoutingModule
+    TesteBRoutingModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

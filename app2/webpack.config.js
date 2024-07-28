@@ -32,8 +32,8 @@ module.exports = {
 
       exposes: {
         './app': './src/bootstrap.ts',
-        './teste-b': './src/bootstrap-teste-b.ts',
-        './teste-a': './src/bootstrap-teste-a.ts',
+        './teste-b': './src/federates-modules/bootstrap-teste-b.ts',
+        './teste-a': './src/federates-modules/bootstrap-teste-a.ts',
         './component': './src/app/app.component.ts',
       },
 
@@ -47,7 +47,6 @@ module.exports = {
           "@angular/common": { requiredVersion: '15.0.0' },
           "@angular/common/http": { requiredVersion: '15.0.0' },
           "@angular/router": { requiredVersion: '15.0.0' },
-
           ...sharedMappings.getDescriptors()
         })
 

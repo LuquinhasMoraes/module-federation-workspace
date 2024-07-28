@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'angular1',
@@ -9,8 +10,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'app2';
 
-  async ngOnInit() {
-    // await import('app2/web-components')
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+  }
+
+  navigate(url: string) {
+    console.log('navigate to: ', url);
+
+    this.router.navigate([url])
   }
 
 }
