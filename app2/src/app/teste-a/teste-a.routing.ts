@@ -6,7 +6,7 @@ import { ComponentBComponent } from './component-b/component-b.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'teste-a',
     component: TesteAComponent,
     children: [
       {

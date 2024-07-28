@@ -9,19 +9,18 @@ import { TesteAModule } from './teste-a/teste-a.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TesteBRoutingModule } from './teste-b/teste-b.routing';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { TesteAComponent } from './teste-a/teste-a.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     RouterTestingModule,
     TesteAModule,
-    TesteBRoutingModule,
-    AppRoutingModule,
+    TesteBRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -33,7 +32,7 @@ export class AppModule implements DoBootstrap {
   }
 
   ngDoBootstrap(): void {
-    const ce = createCustomElement(AppComponent, {injector: this.injector});
+    const ce = createCustomElement(TesteAComponent, {injector: this.injector});
     customElements.define('angular1', ce);
   }
 

@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComponentAComponent } from './component-a/component-a.component';
 import { ComponentBComponent } from './component-b/component-b.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { TesteBComponent } from '../teste-b/teste-b.component';
 
 const routes: Routes = [
 
@@ -17,7 +18,8 @@ const routes: Routes = [
     {
       path: 'teste-a/sub-b',
       component: ComponentBComponent
-    }
+    },
+
 
 ];
 
@@ -25,12 +27,14 @@ const routes: Routes = [
   declarations: [
     ComponentAComponent,
     ComponentBComponent,
-    TesteAComponent
+    TesteAComponent,
+    TesteBComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-  ]
+  ],
+  exports: [TesteAComponent, TesteBComponent]
 })
 export class TesteAModule implements DoBootstrap {
 
@@ -40,6 +44,9 @@ export class TesteAModule implements DoBootstrap {
 
   ngDoBootstrap(): void {
     const ce = createCustomElement(TesteAComponent, {injector: this.injector});
+
     customElements.define('app-teste-a', ce);
+    customElements.define('app-component-a', createCustomElement(ComponentAComponent, {injector: this.injector}));
+    customElements.define('app-component-b', createCustomElement(ComponentBComponent, {injector: this.injector}));
   }
 }

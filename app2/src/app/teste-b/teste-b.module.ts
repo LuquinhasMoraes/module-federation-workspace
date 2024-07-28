@@ -4,11 +4,14 @@ import { TesteBRoutingModule } from './teste-b.routing';
 import { createCustomElement } from '@angular/elements';
 import { TesteBComponent } from './teste-b.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { SubBComponent } from './sub-b/sub-b.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SubBComponent
+  ],
   imports: [
     CommonModule,
     TesteBRoutingModule
